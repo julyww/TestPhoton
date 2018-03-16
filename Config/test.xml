@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<StepParaneters >
+  <TitleName>这里有人晕倒了，快过来看看有没有能帮助他的。</TitleName>
+  <BeginAudio>2</BeginAudio>
+  <BeginAudioLength>0</BeginAudioLength>
+  <Roles>
+    <Role Name="Player1" Type="Operation" IsMaster="true" Remark="急救人员1号" ></Role>
+    <Role Name="Player2" Type="Operation" IsMaster="false" Remark="急救人员2号" ></Role>
+    <Role Name="Player3" Type="Operation"  IsMaster="false" Remark="急救人员3号" ></Role>
+    <Role Name="Player4" Type="Observe "  IsMaster="false" Remark="观察者" ></Role>
+  </Roles>
+  <Step >
+    <!--主角色的位置设置-->
+    <MainMove>
+      <Position X="1"  Y="1" Z="1"></Position>
+      <Rotate X="1"  Y="1" Z="1"></Rotate>
+    </MainMove>
+    <Role Name="Player1">
+      <Cue Path="CueParent/Cube" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <Cue Path="CueParent/Cube1" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="right"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰下面的方块，播放right动画</Remark>
+    </Role>
+    <Role Name="Player3">
+      <Cue Path="CueParent/Cube" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="zhuan"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰下面的方块，播放转圈动画</Remark>
+    </Role>
+  </Step>
+  <Step >
+    <!--主角色的位置设置-->
+    <MainMove>
+      <Position X="1"  Y="1" Z="1"></Position>
+      <Rotate X="1"  Y="1" Z="1"></Rotate>
+    </MainMove>
+    <Role Name="Player2">
+      <Cue Path="CueParent/Cube1" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="tiao"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰上面的方块，播放跳动动画</Remark>
+    </Role>    
+  </Step>
+  <Step >
+    <!--主角色的位置设置-->
+    <MainMove>
+      <Position X="1"  Y="1" Z="1"></Position>
+      <Rotate X="1"  Y="1" Z="1"></Rotate>
+    </MainMove>
+    <Role Name="Player1">
+      <Cue Path="CueParent/Cube" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="tiao"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰下面的方块，播放跳动动画</Remark>
+    </Role>
+    <Role Name="Player2">
+      <Cue Path="CueParent/Cube" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="zhuan"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰下面的方块，播放转动动画</Remark>
+    </Role>
+    <Role Name="Player3">
+      <Cue Path="CueParent/Cube" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="up"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰下面的方块，播放向下动画</Remark>
+    </Role>
+  </Step>
+
+  <Step >
+    <!--主角色的位置设置-->
+    <MainMove>
+      <Position X="1"  Y="1" Z="1"></Position>
+      <Rotate X="1"  Y="1" Z="1"></Rotate>
+    </MainMove>
+    <Role Name="Player2">
+      <Cue Path="CueParent/Cube" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="right"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰下面的方块，播放向右动画</Remark>
+    </Role>
+    <Role Name="Player3">
+      <Cue Path="CueParent/Cube1" Trigger="Role(Clone)"  CueValue1="0.2" IsShow ="true"></Cue>
+      <AnimationObject Path="CueParent"  PlayAnimation="zhuan"  BeginOrEnd="End" ></AnimationObject>
+      <CueAudio>DianTi/1</CueAudio>
+      <Remark>触碰上面的方块，播放转圈动画</Remark>
+    </Role>
+  </Step>
+</StepParaneters>
